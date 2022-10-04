@@ -1,0 +1,23 @@
+<h1>Ajouter un nouveau produit</h1>
+
+<form method="POST" action="?page=addproduct" class="formulaire">
+    <div>
+        <label for="name" class="form-label">Titre</label>
+        <input type="text" name="name" id="name" class="form-control" required>
+        <br>
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" id="description" row="5" class="form-control" required></textarea>
+        <br>
+        <span class="input-group mb-3">
+            <label for="price">Prix</label>
+            <input type="float" name="price" id="price" class="form-control" required>
+            <label for="price" class="input-group-text">€</label>
+        </span>
+    </div>
+    <div>
+        <label for="img" class="form-label">Photo</label>
+        <img src="<?=$datas["img"]?>"/>
+        <input type="text" name="img" id="img" class="form-control" required>
+    </div>
+    <button type="submit">Ajouter le produit</button>
+</form>

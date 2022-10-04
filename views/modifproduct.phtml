@@ -1,0 +1,27 @@
+<h1>Modifier un produit</h1>
+
+<?php foreach($data as $datas):?>
+<?php if($_GET["id"]==$datas["id"]):?>
+<form method="POST" action="?page=validmodif&id=<?=$datas["id"]?>" class="formulaire">
+    <div>
+        <label for="name" class="form-label">Titre</label>
+        <input type="text" name="name" id="name" class="form-control" value="<?=$datas["name"]?>" required>
+        <br>
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" id="description" row="5" class="form-control" required><?=$datas["description"]?></textarea>
+        <br>
+        <span class="input-group mb-3">
+            <label for="price">Prix</label>
+            <input type="float" name="price" id="price" class="form-control" value="<?=$datas["price"]?>" required>
+            <label for="price" class="input-group-text">€</label>
+        </span>
+    </div>
+    <div>
+        <label for="img" class="form-label">Photo</label>
+        <img src="<?=$datas["img"]?>"/>
+        <input type="text" name="img" id="img" class="form-control" value="<?=$datas["img"]?>" required>
+    </div>
+    <button type="submit">Ajouter le produit</button>
+</form>
+<?php endif?>
+<?php endforeach ?>

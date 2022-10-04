@@ -1,0 +1,18 @@
+<h1 class="shop">Boutique - User</h1>
+
+<section class="gallery">
+    <?php foreach($data["products"] as $datas): ?>
+            <article>
+                <h3><?=$datas["name"]?></h3>
+                    <figure class="img-hover" onclick="location.href = 'index.php?page=showproduct&id=<?=$datas['id']?>'">
+                        <img src="<?=$datas["img"]?>"/>
+                        <figcaption  class="hover">
+                            <p class="description"><?=$datas["description"]?></p>
+                            <p class="prix"><?=$datas["price"]?>€ 
+                            <a onclick="" href="#"><i class="fa-solid fa-basket-shopping" ></i></a></p>
+                        </figcaption>
+                    </figure>
+            </article>
+        <?php endforeach; ?>
+</section>
+    

@@ -1,0 +1,45 @@
+<section class="product">
+    <?php foreach($data as $datas):?>
+    <?php if($_GET["id"]==$datas["id"]):?>
+        <article>
+            <div id="carouselExampleControls" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="<?=$datas["img"]?>" target="_blank"><img src="<?=$datas["img"]?>" id="1" class="d-block w-100" alt="<?=$datas["name"]?></a>">
+                    </div>
+                    <div class="carousel-item">
+                    <a href="<?=$datas["img"]?>" target="_blank"><img src="<?=$datas["img"]?>" id="2" class="d-block w-100" alt="<?=$datas["name"]?>"></a>
+                    </div>
+                    <div class="carousel-item">
+                    <a href="<?=$datas["img"]?>" target="_blank"><img src="<?=$datas["img"]?>" id="3" class="d-block w-100" alt="<?=$datas["name"]?>">
+                    </a></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <a href="#" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><img src="<?=$datas["img"]?>"></a>
+                    <a href="#" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"><img src="<?=$datas["img"]?>"></a>
+                    <a href="#" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"><img src="<?=$datas["img"]?>"></a>
+                </div>
+            </div>
+        </article>
+        
+        <article>
+            <h2><?=$datas["name"]?></h3>
+            <p><?=$datas["description"]?></p>
+            <div class="prix">
+                <p><?=$datas["price"]?>€ <br>
+                <span>... € / kg</span></p>
+                <a onclick="" href="#"><i class="fa-solid fa-basket-shopping" ></i></a>
+            </div>
+        </article>
+    <?php endif?>
+    <?php endforeach ?>
+</section>
+    

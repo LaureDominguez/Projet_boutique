@@ -1,0 +1,27 @@
+<h1>Boutique - Admin</h1>
+<p>
+    <a href="?page=addproduct">Ajouter un nouveau produit</a>
+</p>
+
+<table class="table table-striped align-middle">
+    <tr>
+        <th class="table-active">Titre</th>
+        <th class="table-active">Image</th>
+        <th class="table-active">Description</th>
+        <th class="table-active">Prix</th>
+        <th class="table-active">Action</th>
+    </tr>
+    <?php foreach($data["products"] as $datas): ?>
+        <tr>
+            <td class="table-active"><?=$datas["name"]?></td>
+            <td class="table-active"><img src="<?=$datas["img"]?>"/></td>
+            <td class="table-active"><?=$datas["description"]?></td>
+            <td class="table-active"><?=$datas["price"]?>€</td>
+            <td class="table-active">
+                <a onclick="" href="index.php?page=modifproduct&id=<?=$datas['id']?>"><i class="fa-solid fa-pen"></i></a><br>
+                <a onclick="confirmDelete(<?=$datas['id']?>)" href="#"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
