@@ -21,11 +21,11 @@ return[
         'action' => [\MyApp\Controllers\ShopuserController::class,'index']
       ],
       'showproduct' =>[
-        'name' => 'Boutique - detail',
+        'name' => 'Boutique-detail',
         'action' => [\MyApp\Controllers\ShowproductController::class,'index']
         ],
       'shopadmin' =>[
-        'name' => 'Boutique - admin',
+        'name' => 'Boutique-admin',
         'action' => [\MyApp\Controllers\ShopadminController::class,'index']
       ],
       'addproduct' =>[

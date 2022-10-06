@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * An other controller to handle add product form
  * 

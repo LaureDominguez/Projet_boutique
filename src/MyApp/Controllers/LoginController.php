@@ -27,6 +27,7 @@ class LoginController{
         if (isset($_POST["email"])){
             $login_done = User::login( $_POST["email"], $_POST["password"],);
             if ( $login_done===true ){
+                
             header("Location:index.php?page=profile");
             exit;
             } echo "mot de passe invalide";
